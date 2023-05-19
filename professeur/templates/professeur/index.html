@@ -1,0 +1,54 @@
+{% extends 'professeur\base.html' %}
+
+{% block body %}
+
+  <div class="add_buttons">
+
+    <div class="button-group">
+      <a href="{% url 'display_professeur' %}" class="btn btn-primary btn-md btn-trim" role="button"> Professeur</a>
+
+    </div>
+
+  </div>
+
+  <div>
+
+    <h4>Currently Viewing {{ header }}</h4>
+  </div>
+
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th>id</th>
+        <th>first_name</th>
+        <th>last_name</th>
+        <th>email</th>
+        <th>phone_number</th>
+        <th>department</th>
+        <th>subject</th>
+        <th>years_of_experience</th>
+        <th></th>
+      </tr>
+    </thead>
+
+    <tbody>
+
+      {% for item in items %}
+
+      <tr>
+        <td>{{ item.pk }}
+        <td>{{ item.first_name }}</td>
+        <td>{{ item.last_name }} $</td>
+        <td>{{ item.email }}</td>
+        <td>{{ item.phone_number }}</td>
+        <td>{{ item.department }}</td>
+        <td>{{ item.subject }} $</td>
+        <td>{{ item.years_of_experience }}</td>
+
+      </tr>
+
+      {% endfor %}
+    </tbody>
+  </table>
+
+{% endblock %}

@@ -1,0 +1,15 @@
+{% extends 'etudiant\base.html' %}
+
+{% block body %}
+
+<h1>Etudiant Details</h1>
+<p><strong>Nom : </strong> {{ etudiant.first_name }} {{ etudiant.last_name }}</p>
+<p><strong>Email : </strong> {{ etudiant.email }}</p>
+<p><strong>Telephone : </strong> {{ etudiant.phone_number }}</p>
+<p><strong>Filiere : </strong>{{ etudiant.department }}</p>
+<p><strong>Nombre d'absence : </strong>{{ etudiant.absence }}</p>
+<p><strong>Justifier : </strong>{{ etudiant.justifier }}</p>
+<p><strong>Non justifier : </strong>{{ etudiant.non_justifier }}</p>
+<p><strong>Justification : </strong>{{ etudiant.justification }}</p>
+
+{% endblock %}

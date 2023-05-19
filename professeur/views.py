@@ -6,7 +6,7 @@ from .models import *
 
 
 def index(request):
-    return render(request,'index.html')
+    return render(request,'professeur/index.html')
 
 def display_professeur(request):
     items = Professeur.objects.all()
@@ -14,4 +14,4 @@ def display_professeur(request):
         'items': items,
         'header': 'Professeur',
     }
-    return render(request,'index.html', context)
+    return render(request,'professeur/index.html', context)
